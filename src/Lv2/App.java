@@ -39,11 +39,7 @@ public class App {
             String str = scanner.nextLine();
             if (str.equals("exit")){
                 break; }
-
         }
     }
-
-
-
-    }
+}
 
