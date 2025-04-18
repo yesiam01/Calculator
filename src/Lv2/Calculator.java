@@ -4,13 +4,11 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Calculator {
-    public List<String> cal;
+    private List<String> cal = new ArrayList<>();
 
-    public Calculator() {
-        cal = new ArrayList<>();
-    }
-//  타입의 값, 기능의 이름=메서드 (매계 변수)
-    public int caculate(int intValue, int intValue2, char operator) {
+
+    //  접근 제어자, 타입의 값, 기능의 이름=메서드 (매계 변수)
+    public int calculate(int intValue, int intValue2, char operator) {
         int result = 0;
 
         switch (operator) {
@@ -32,9 +30,23 @@ public class Calculator {
         }
         String record = intValue + " " + operator + " " + intValue2 + " = " + result;
         cal.add(record);
-
-
         return result;
+    }
+
+
+    public List<String> getCal() {
+        return cal;
+    }
+
+    public void setCal(List<String> cal) {
+        this.cal = cal;
+    }
+
+    public void removeResult() {
+        if (cal.size() > 0) {
+            cal.remove(0); // 가장 먼저 저장된 데이터 삭제
+            System.out.println("가장 오래된 계산 기록이 삭제되었습니다.");
+        }
     }
 }
 
