@@ -42,8 +42,12 @@ public class Calculator {
     }
 
     public void removeResult() {
-            cal.remove(cal.size()-1);
+        if (!cal.isEmpty()) {
+            cal.remove(cal.size() - 1);
             System.out.println("가장 최근 기록이 삭제되었습니다.");
+        } else {
+            System.out.println("삭제할 기록이 없습니다");
+        }
     }
 }
 
