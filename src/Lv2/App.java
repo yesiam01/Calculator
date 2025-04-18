@@ -33,19 +33,16 @@ public class App {
 
             scanner.nextLine();
 
-            System.out.print("(exit 시 종료) (enter 시 재시작) (remove 시 기록 초기화) 더 계산하시겠습니까?");
+            System.out.print("(exit 시 종료) (enter 시 재시작) (remove 시 가장 최근 기록 삭제) 더 계산하시겠습니까?");
             String str = scanner.nextLine();
 
             if (str.equals("exit")) {
                 break;
             } else if (str.equalsIgnoreCase("remove")) {
-                calculator.setCal(new java.util.ArrayList<>());
-                System.out.println("계산 기록이 초기화되었습니다");
-            } else if (str.equalsIgnoreCase("remove")) {
                 calculator.removeResult();
-
             }
         }
     }
 }
+
 

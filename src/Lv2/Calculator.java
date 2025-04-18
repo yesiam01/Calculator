@@ -44,8 +44,8 @@ public class Calculator {
 
     public void removeResult() {
         if (cal.size() > 0) {
-            cal.remove(0); // 가장 먼저 저장된 데이터 삭제
-            System.out.println("가장 오래된 계산 기록이 삭제되었습니다.");
+            cal.remove(0);
+            System.out.println("가장 최근 기록이 삭제되었습니다.");
         }
     }
 }
