@@ -25,7 +25,7 @@ public class App {
             int result = calculator.calculate(intValue, intValue2, operator);
             System.out.println("결과: " + result);
 
-            System.out.println("현재까지의 계산 기록: ");
+            System.out.print("현재까지의 계산 기록: ");
             List<String> record = calculator.getCal();
             for (String line : record) {
                 System.out.println(line);

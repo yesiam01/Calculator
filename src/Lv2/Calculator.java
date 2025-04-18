@@ -7,7 +7,6 @@ public class Calculator {
     private List<String> cal = new ArrayList<>();
 
 
-    //  접근 제어자, 타입의 값, 기능의 이름=메서드 (매계 변수)
     public int calculate(int intValue, int intValue2, char operator) {
         int result = 0;
 
@@ -43,10 +42,8 @@ public class Calculator {
     }
 
     public void removeResult() {
-        if (cal.size() > 0) {
-            cal.remove(0);
+            cal.remove(cal.size()-1);
             System.out.println("가장 최근 기록이 삭제되었습니다.");
-        }
     }
 }
 
